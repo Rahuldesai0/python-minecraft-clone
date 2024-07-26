@@ -14,11 +14,19 @@ authors = [
 ]
 readme = "README.md"
 
+[build-system]
+requires = ["poetry-core", "setuptools", "cython"]
+
+[tool.poetry.build]
+script = "build.py"
+generate-setup-file = false
+
 [tool.poetry.dependencies]
 python = "^3.10"
 pyglet = "^2.0.16"
 nbtlib = "^2.0.4"
 base36 = "^0.1.1"
+pyglm = "^2.7.1"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.5.5"
