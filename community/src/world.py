@@ -79,7 +79,7 @@ class World:
 
 					if sameas is not None:
 						name = sameas.name
-						texture = sameas.block_face_textures
+						texture = dict(sameas.block_face_textures)
 						model = sameas.model
 
 				elif prop[0] == "name":

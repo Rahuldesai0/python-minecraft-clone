@@ -45,7 +45,7 @@ class World:
 					sameas_number = int(prop[1])
 
 					name = self.block_types[sameas_number].name
-					texture = self.block_types[sameas_number].block_face_textures
+					texture = dict(self.block_types[sameas_number].block_face_textures)
 					model = self.block_types[sameas_number].model
 
 				elif prop[0] == "name":
