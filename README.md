@@ -40,7 +40,7 @@ Run the following command in the directory of any episode to run the result from
 python3 main.py
 ```
 
-This tutorial requires Python version 3.8 minimum (#56, with only a few changes though, it can run on versions much lower).
+This tutorial requires Python version 3.8 minimum (see #56). With only a few changes though, it can run on versions much lower.
 
 If you are using Poetry, you can run the following command:
 
@@ -66,10 +66,10 @@ Here is a list of all the episodes and a brief description of what each one of t
 - EP11: Until now, changes to the world could not be saved and loaded later. This episode introduces the NBT format and the `nbtlib` module to save and load world chunks.
 - EP12a: Before this episode we could just phase through blocks. Collisions are introduced in this episode, which prevents this.
 - EP12b: The player until now was also not affected by gravity or any kind of physics-based movement. This episode introduces gravity, jumping, and proper physics-based movement.
+- EP13a: The code has gotten a little crusty. This episode restructures the codebase, adds a `pyproject.toml` file and switches to Poetry for better dependency management, and adds a formatter and a linter as well as a CI setup to check all this.
 
 The following episodes have been planned, but the videos for them have not been made:
 
-- EP13a: The code has gotten a little crusty. This episode restructures the codebase, adds a `pyproject.toml` file and switches to Poetry for better dependency management, and adds a formatter and a linter as well as a CI setup to check all this.
 - EP13b: Loading big save files took a long time before this. This episode covers profiling and optimization techniques and rewrites a lot of the chunk loading code in Cython to speed it up dramatically.
 - EP14: This episode adds mobs, which are non-player entities in the world which can move around on their own. This will probably be split into multiple parts, notably one for adding the mobs themselves (which will probably include player interactions and a basic combat system), pathfinding and AI, animations, and finally lighting (maybe with shadows too?).
 - EP15: This is not totally confirmed yet but I'd like this episode to cover basic 2D UI elements such as a reticle, and maybe even a GUI system with a hotbar and whatnot.
