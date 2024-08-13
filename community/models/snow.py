@@ -3,6 +3,8 @@ is_cube = False
 glass = False
 translucent = False
 
+# fmt: off
+
 colliders = [
 	[
 		(-0.5, -0.5000, -0.5),

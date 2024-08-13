@@ -3,6 +3,8 @@ is_cube = False
 glass = False
 translucent = False
 
+# fmt: off
+
 colliders = []
 
 vertex_positions = [

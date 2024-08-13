@@ -1,10 +1,12 @@
 # in the end, it'd be nice to have it so that liquids fill up the whole block when they have a block above them
 # this would avoid the problems this solution has
 
-translucent = True
 transparent = 1
 is_cube = True
 glass = True
+translucent = True
+
+# fmt: off
 
 colliders = []
 
@@ -25,7 +27,6 @@ tex_coords = [
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 ]
-
 
 shading_values = [
 	[0.6, 0.6, 0.6, 0.6],
