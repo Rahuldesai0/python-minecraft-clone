@@ -1,9 +1,8 @@
-# fmt: off
-
 transparent = True
 is_cube = True
 glass = True
-translucent = True
+
+# fmt: off
 
 colliders = [
 	[
