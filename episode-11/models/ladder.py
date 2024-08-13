@@ -1,8 +1,8 @@
-# fmt: off
-
 transparent = True
 is_cube = False
 glass = False
+
+# fmt: off
 
 vertex_positions = [
 	[-0.3536, 0.5000,  0.3536, -0.3536, -0.5000,  0.3536,  0.3536, -0.5000, -0.3536,  0.3536, 0.5000, -0.3536],
