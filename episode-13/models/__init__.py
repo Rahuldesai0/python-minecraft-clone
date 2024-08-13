@@ -25,5 +25,4 @@ __all__ = [
 	"tinted_glass",
 ]
 
-from . import cube
 from . import *
