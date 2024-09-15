@@ -1,6 +1,6 @@
 import math
 import random
-import cProfile
+from cProfile import Profile
 import pyglet
 
 pyglet.options["shadow_window"] = False
@@ -247,9 +247,38 @@ class Game:
 		pyglet.app.run()
 
 
-if __name__ == "__main__":
-	with cProfile.Profile() as profiler:
-		game = Game()
+def sample_initial_loading_time():
+	with Profile() as profiler:
+		Game()
+		profiler.create_stats()
 		profiler.dump_stats("stats.prof")
 
+		for k in profiler.stats.keys():
+			# file line name
+			file, _, name = k
+
+			if "world.py" in file and name == "__init__":
+				# ? ncalls time cumtime parent
+				_, _, _, cumtime, _ = profiler.stats[k]
+				break
+
+		else:
+			raise Exception("Couldn't find work init stats!")
+
+		return cumtime
+
+
+def benchmark_initial_loading_time():
+	n = 10
+	samples = [sample_initial_loading_time() for _ in range(n)]
+	mean = sum(samples) / n
+
+	print(mean)
+	exit()
+
+
+if __name__ == "__main__":
+	# benchmark_initial_loading_time()
+
+	game = Game()
 	game.run()
