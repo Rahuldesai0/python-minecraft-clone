@@ -57,7 +57,7 @@ class Save:
 					pickle.dump(blocks, f)
 
 			except FileNotFoundError:
-				return # Fail quietly if chunk file not found.
+				return  # Fail quietly if chunk file not found.
 
 		# Create chunk and fill it with the blocks from our chunk file.
 
